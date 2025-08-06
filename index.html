@@ -5546,10 +5546,10 @@
                 }
 
                 this.showModal({
-                    title: "角色洞察",
+                    title: "角色心声",
                     body: bodyHtml,
                     actions: [
-                        { text: '进入聊天', class: 'btn-primary', handler: () => {
+                        { text: '返回聊天', class: 'btn-primary', handler: () => {
                             this.hideModal();
                             this.openChat(contactId); 
                         }}
@@ -7054,7 +7054,7 @@ ${promptLines.join('\n')}
 ---\n
 **收款回复格式**：[收款人角色名|领取转账|转账人名字|转账金额]
 **退还回复格式**：[退款人角色名|退还转账|转账人名字|转账金额]
-例如：[孟祁年|领取转账|商时序|￥0.01]
+例如：[默非斯特|领取转账|伊丝俐娅|￥0.01]
 ---`;
             },
 
@@ -7578,7 +7578,7 @@ ${promptLines.join('\n')}
                 const confirmation = await new Promise(resolve => {
                     UIManager.showModal({
                         title: "重新生成回复",
-                        body: "<p>你确定要让AI重新生成上一条回复吗？这会删除AI的最新几条消息。</p>",
+                        body: "<p>你确定要重新生成回复吗？这会删除最新的几条消息。</p>",
                         actions: [
                             { text: '取消', class: 'btn-secondary', handler: () => { UIManager.hideModal(); resolve(false); } },
                             { text: '确定', class: 'btn-primary', handler: () => { UIManager.hideModal(); resolve(true); } }
@@ -8547,7 +8547,7 @@ async handleAutoSummaryRequest(chatId) {
 10. **严禁OOC，严禁生成格式之外的内容，严禁代替玩家进行评论或回复**。
 11.举例：
 <朋友圈>
-【法夏：今天天气真不错，有没有要一起出去玩的？|7/3 8:36】
+【羽骨：今天天气真不错，有没有要一起出去玩的？|7/3 8:36】
 （已点赞：vv,入入）
 〖vv：带我一个！〗
 〖入入：我也要去——〗
@@ -8642,8 +8642,8 @@ async handleAutoSummaryRequest(chatId) {
 5.  **严禁OOC，严禁生成格式之外的内容，严禁代替玩家进行评论或回复**。
 6.  至少生成2条评论，最多生成5条评论。
 7.  举例：
-（已点赞：法夏,vv,入入）
-〖法夏：这是什么，看起来很好吃的样子〗
+（已点赞：羽骨,vv,入入）
+〖羽骨：这是什么，看起来很好吃的样子〗
 〖入入：我也要吃www〗
 ---
 `;
@@ -8713,7 +8713,7 @@ async handleAutoSummaryRequest(chatId) {
 私聊规则(可选):
 1.  如果你想让某个角色私聊玩家，请使用 <私聊></私聊> 标签包裹。
 2.  私聊内容格式可以是: [角色名|消息内容] 或 {角色名|撤回内容} 或 [角色名|语音|时长|内容] 或 [角色名|转账|收款人|金额|备注]
-3.  例如: <私聊>[法夏|你刚才发的动态是什么意思？]</私聊>
+3.  例如: <私聊>[羽骨|你刚才发的动态是什么意思？]</私聊>
 ---
 `;
                 
