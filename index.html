@@ -3670,7 +3670,7 @@
 <body>
     <!-- 开屏动画 -->
     <div id="splash-screen">
-        <div class="splash-logo">法夏聊天室</div>
+        <div class="splash-logo">°˖꒰ঌ水色羽骨໒꒱˖°</div>
         <div class="splash-loader"></div>
         <p style="position: absolute; bottom: 20px; font-size: 12px; color: #aaa; user-select: none;">此聊天室由法夏制作，xhs:@回风</p>
     </div>
@@ -3743,7 +3743,7 @@
                     <div class="settings-list">
                         <div class="setting-item" id="setting-tutorial">
                             <i class="fas fa-question-circle"></i>
-                            <span>法夏食用指南</span>
+                            <span>食用指南</span>
                             <i class="fas fa-chevron-right"></i>
                         </div>
                         <!-- 新增的聊天设置项 -->
@@ -3769,7 +3769,7 @@
                         </div>
                         <div class="setting-item" id="setting-wish-pool">
                             <i class="fas fa-heart"></i>
-                            <span>角色许愿池</span>
+                            <span>角色卡池</span>
                             <i class="fas fa-chevron-right"></i>
                         </div>
                          <div class="setting-item" id="setting-reset">
@@ -3992,7 +3992,7 @@
                         </div>
                     </div>
                     <div class="tutorial-watermark">
-                        <span>此聊天室由法夏制作，xhs:@回风。</span><br>
+                        <span> </span><br>
                         <span style="font-size: 0.9em; opacity: 0.8;">功能反馈与新功能需求可联系我噢⌯>ᴗo⌯ .ᐟ.ᐟ</span>
                     </div>
                 </div>
@@ -5506,8 +5506,8 @@
                     { name: '巧克力礼盒', price: 88.00, image: 'https://cfimg.200996.xyz/file/1752744402256_retouch_2025071717245049.png', message: '甜甜的巧克力，给甜甜的你。' },
                     { name: '游戏机', price: 2199.00, image: 'https://cfimg.200996.xyz/file/1752744403509_retouch_2025071717243405.png', message: '一起玩游戏吧！' },
                     { name: '手作蛋糕', price: 68.00, image: 'https://z.wiki/u/18hMdP', message: '亲手为你做的，尝尝看？' },
-                    { name: '可爱猫咪', price: 0, image: 'https://z.wiki/u/RSvBmf', message: '路边捡的，给你养了。' },
-                    { name: '奶茶一杯', price: 18.00, image: 'https://z.wiki/u/XIexsP', message: '天冷了，喝杯热奶茶吧。' }
+                    { name: '可爱猫咪', price: 0, image: 'https://z.wiki/u/RSvBmf', message: '路边的小猫，捡回来给你养了。' },
+                    { name: '奶茶一杯', price: 18.00, image: 'https://z.wiki/u/XIexsP', message: '喝杯热奶茶吧。' }
                 ];
                 
                 PREDEFINED_GIFTS.forEach(gift => {
@@ -5546,7 +5546,7 @@
                 }
 
                 this.showModal({
-                    title: "角色心声",
+                    title: "角色洞察",
                     body: bodyHtml,
                     actions: [
                         { text: '返回聊天', class: 'btn-primary', handler: () => {
@@ -14918,7 +14918,7 @@ handleImmediateSummary(entityId, isGroup) {
 
                 const myProfile = await DBHelper.get('profile', 'myProfile');
                 const allContacts = await DBHelper.getAll('contacts');
-                let authorName = "未知用户";
+                let authorName = "朋友圈用户";
                 if(comment.authorId === myProfile.id) {
                     authorName = myProfile.name;
                 } else {
@@ -15320,7 +15320,7 @@ handleImmediateSummary(entityId, isGroup) {
 
             async handleWishPool() {
                 UIManager.showModal({
-                    title: "角色许愿池",
+                    title: "角色卡池",
                     body: `
                         <div class="details-actions" style="flex-direction: column; gap: 15px;">
                             <button class="details-btn" data-action="buyable" style="border-color: var(--accent-color); color: var(--accent-color-deep);">
